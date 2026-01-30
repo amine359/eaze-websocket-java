@@ -1,0 +1,7 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    // No external dependencies for the core library as per "pure Java" requirement
+}

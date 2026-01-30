@@ -1,0 +1,5 @@
+rootProject.name = 'eaze-websocket-java'
+include 'eaze-websocket-core'
+include 'eaze-websocket-demo'
+
+include 'experiments'

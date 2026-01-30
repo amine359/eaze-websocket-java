@@ -1,0 +1,30 @@
+plugins {
+    id 'application'
+}
+
+dependencies {
+    implementation project(':eaze-websocket-core')
+}
+
+application {
+    mainClass = 'com.eaze.websocket.demo.WebSocketDemoServer'
+}
+
+jar {
+    dependsOn ':eaze-websocket-core:jar'
+
+    manifest {
+        attributes(
+                'Main-Class': 'com.eaze.websocket.demo.WebSocketDemoServer'
+        )
+    }
+
+    // Include all compile/runtime dependencies
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    // Handle duplicate files (like META-INF/LICENSE) gracefully
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
