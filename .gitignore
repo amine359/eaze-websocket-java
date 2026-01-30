@@ -1,0 +1,47 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+gen/
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# Local Environment & Credentials
+.env
+.env.local
+*.properties
+!gradle/wrapper/gradle-wrapper.properties
+!src/main/resources/*.properties
+*.key
+*.pem
+*.jks
+
+# Logs and Reports
+*.log
+logs/
+threads_report.txt
+build/reports/
+
+# OS-generated metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python (for benchmark scripts)
+__pycache__/
+*.py[cod]
+*$py.class
